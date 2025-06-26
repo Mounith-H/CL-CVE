@@ -23,12 +23,19 @@ PBL/
 │   ├── tb.sv              # Main testbench (RCA default)
 │   ├── tb_cla.sv          # CLA-specific testbench
 │   └── tb_mult.sv         # Multiplier-specific testbench
-├── run_rca.tcl            # RCA Adder test script
-├── run_cla.tcl            # CLA Adder test script
-├── run_mult.tcl           # Multiplier test script
-├── run_all_tests.tcl      # Run all tests
-├── run_all_tests.bat      # Windows batch file
-└── cleanup.bat            # Cleanup temporary projects
+├── scripts/               # TCL automation scripts
+│   ├── run_rca.tcl        # RCA Adder test script
+│   ├── run_cla.tcl        # CLA Adder test script
+│   ├── run_mult.tcl       # Multiplier test script
+│   ├── run_all_tests.tcl  # Run all tests
+│   └── *.tcl              # Other utility scripts
+├── batch/                 # Windows batch files
+│   ├── run_all_tests.bat  # Run all tests
+│   ├── test_rca.bat       # Test RCA Adder
+│   ├── test_cla.bat       # Test CLA Adder
+│   ├── test_mult.bat      # Test Multiplier
+│   └── cleanup.bat        # Cleanup temporary projects
+└── README.md              # This documentation
 ```
 
 ## DUT Modules
@@ -73,26 +80,26 @@ PBL/
 
 #### RCA Adder Test
 ```bash
-vivado -mode batch -source run_rca.tcl
+vivado -mode batch -source scripts\run_rca.tcl
 ```
 
 #### CLA Adder Test  
 ```bash
-vivado -mode batch -source run_cla.tcl
+vivado -mode batch -source scripts\run_cla.tcl
 ```
 
 #### Multiplier Test
 ```bash
-vivado -mode batch -source run_mult.tcl
+vivado -mode batch -source scripts\run_mult.tcl
 ```
 
 ### Running All Tests
 ```bash
 # Using TCL script
-vivado -mode batch -source run_all_tests.tcl
+vivado -mode batch -source scripts\run_all_tests.tcl
 
 # Using Windows batch file
-run_all_tests.bat
+batch\run_all_tests.bat
 ```
 
 ### Custom Test Configuration

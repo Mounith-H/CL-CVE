@@ -11,7 +11,7 @@ add_files -norecurse ./design/multiplier.sv
 add_files -norecurse ./design/dut_wrapper.sv
 
 # 3. Add simulation sources - use CLA-specific testbench
-add_files -fileset sim_1 -norecurse ./sim/tb_cla.sv
+add_files -fileset sim_1 -norecurse ../sim/tb_cla.sv
 
 # 4. Set simulation properties
 set_property top tb_cla [get_filesets sim_1]
