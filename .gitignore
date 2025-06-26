@@ -1,0 +1,38 @@
+# Vivado generated files
+*.jou
+*.log
+*.backup.jou
+*.backup.log
+vivado.jou
+vivado.log
+
+# Temporary project directories
+temp_*/
+
+# Vivado project files (if any)
+*.xpr
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# XSim generated files
+xsim.dir/
+*.wdb
+*.wcfg
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# IDE files
+.vscode/
+.idea/
+
+# Backup files
+*~
+*.bak
+*.orig
