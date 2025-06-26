@@ -11,7 +11,7 @@ add_files -norecurse ./design/multiplier.sv
 add_files -norecurse ./design/dut_wrapper.sv
 
 # 3. Add simulation sources
-add_files -fileset sim_1 -norecurse ../sim/tb.sv
+add_files -fileset sim_1 -norecurse ./sim/tb.sv
 
 # 4. Set simulation properties
 set_property top tb [get_filesets sim_1]

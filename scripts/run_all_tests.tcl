@@ -9,17 +9,17 @@ puts ""
 
 # Test 1: RCA Adder
 puts "--- TEST 1: RCA ADDER ---"
-source run_rca.tcl
+source scripts/run_rca.tcl
 puts ""
 
 # Test 2: CLA Adder  
 puts "--- TEST 2: CLA ADDER ---"
-source run_cla.tcl
+source scripts/run_cla.tcl
 puts ""
 
 # Test 3: Multiplier
 puts "--- TEST 3: MULTIPLIER ---"
-source run_mult.tcl
+source scripts/run_mult.tcl
 puts ""
 
 puts "========================================="
