@@ -72,7 +72,7 @@ Windows command-line scripts that:
 - Provide simple one-click execution of tests
 - Handle cleanup operations
 
-## DUT Modules Explained (For Non-Verilog Users)
+## DUT Modules Explained
 
 ### 1. Ripple Carry Adder (RCA)
 The Ripple Carry Adder (`adder_rca.sv`) is a digital circuit that adds two 8-bit binary numbers.
@@ -181,7 +181,7 @@ The DUT Wrapper (`dut_wrapper.sv`) is a special module that contains all three d
 - Easy comparison between different implementations
 - Supports automated testing workflows
 
-## Testbench Architecture Explained (For Non-Verilog Users)
+## Testbench Architecture Explained
 
 ### What is a Testbench?
 A testbench is a special program that verifies digital designs by:
@@ -578,7 +578,7 @@ Then modify `scripts\run_cla.tcl` to include:
 set_property -name {xsim.simulate.xsim.more_options} -value {+DUT_TYPE=adder_cla +MODE=random +VECTORS=1000 +DELAY=1} -objects [get_filesets sim_1]
 ```
 
-## TCL Script Architecture for Non-Verilog Users
+## TCL Script Architecture
 
 ### What is TCL?
 TCL (Tool Command Language) is a scripting language used to automate Xilinx Vivado operations. Think of it as a special language that tells Vivado what to do step by step, without needing to click through the GUI.
@@ -599,7 +599,7 @@ Each TCL script in this project follows this general pattern:
 5. **Results Collection**: Capture and display test results
 6. **Cleanup**: Close project and remove temporary files
 
-### Key TCL Commands Explained for Non-Verilog Users
+### Key TCL Commands Explained
 
 #### 1. Create Project
 ```tcl
