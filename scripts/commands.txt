@@ -1,0 +1,20 @@
+vivado -mode batch -source scripts\run_cla.tcl
+
+vivado -mode batch -source scripts\run_test.tcl -tclargs adder_rca 
+
+
+DUT_TYPE
+adder_cla
+adder_rca
+multiplier
+
+MODE
+directed
+random
+exhaustive
+
+VECTORS 50
+
+DELAY 1
+
+vivado -mode batch -source scripts/xsim_script.tcl -tclargs "+DUT_TYPE=adder_cla" "+MODE=random" "+VECTORS=50" "+DELAY=1"

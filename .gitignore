@@ -36,3 +36,6 @@ Thumbs.db
 *~
 *.bak
 *.orig
+
+#paper
+report_latex/

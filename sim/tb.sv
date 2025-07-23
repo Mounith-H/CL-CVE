@@ -61,11 +61,11 @@ module tb;
 
   // Get test configuration from command line
   initial begin
-    if (!$value$plusargs("DUT_TYPE=%s", dut_type)) dut_type = "adder_rca"; // Back to RCA default
-    if (!$value$plusargs("MODE=%s", test_mode)) test_mode = "directed";
-    if (!$value$plusargs("VECTORS=%d", num_vectors)) num_vectors = 10;
-    if (!$value$plusargs("DELAY=%d", delay_cycles)) delay_cycles = 2;
-    
+    if (!$value$plusargs("+DUT_TYPE=%s", dut_type)) dut_type = "adder_rca"; // Back to RCA default
+    if (!$value$plusargs("+MODE=%s", test_mode)) test_mode = "directed";
+    if (!$value$plusargs("+VECTORS=%d", num_vectors)) num_vectors = 10;
+    if (!$value$plusargs("+DELAY=%d", delay_cycles)) delay_cycles = 2;
+
     $display("=== TESTBENCH CONFIGURATION ===");
     $display("DUT_TYPE: %s", dut_type);
     $display("TEST_MODE: %s", test_mode);
