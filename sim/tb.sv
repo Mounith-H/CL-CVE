@@ -38,6 +38,8 @@ module tb;
   int pass_count = 0;
   int fail_count = 0;
 
+   int n = 0;
+
   // Clock generation
   initial begin
     clk = 0;
@@ -135,15 +137,22 @@ module tb;
     automatic int actual_tests = (num_vectors < max_tests) ? num_vectors : max_tests;
     
     if (WIDTH > 4) begin
-      $display("WARNING: Exhaustive testing for WIDTH=%d may take very long", WIDTH);
+      $display("WARNING: Exhaustive testing for WIDTH= %d may take very long", WIDTH);
       $display("Limiting to %d tests", num_vectors);
     end
-    
-    for (int i = 0; i < actual_tests; i++) begin
-      test_a = i % (2**WIDTH);
-      test_b = (i / (2**WIDTH)) % (2**WIDTH);
+  $display("number of test cases: %d", actual_tests);
+  n = 0;
+
+  test_loop: for (int i = 0; i < actual_tests; i++) begin
+    for (int j = 0; j < (actual_tests/2); j++) begin
+      test_a = i;
+      test_b = j;
       apply_test(test_a, test_b);
+      if(++n >= num_vectors) begin
+        disable test_loop; // exits both loops
+      end 
     end
+  end
   endtask
 
   // Apply single test

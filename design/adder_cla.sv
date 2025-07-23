@@ -43,7 +43,7 @@ module adder_cla #(parameter WIDTH = 8)(
       if (i == 0)
         assign carry[i+1] = generate_bits[i];
       else if (i == 1)
-        assign carry[i+1] = generate_bits[i] | (propagate_bits[i] & generate_bits[i-1]);
+        assign carry[i+1] = generate_bits[i] | (propagate_bits[i] & generate_bits[i-1] + 1);
       else if (i == 2)
         assign carry[i+1] = generate_bits[i] | 
                            (propagate_bits[i] & generate_bits[i-1]) |

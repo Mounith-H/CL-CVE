@@ -16,6 +16,7 @@ temp_*/
 *.ip_user_files/
 *.runs/
 *.sim/
+./my_xsim_proj
 
 # XSim generated files
 xsim.dir/
